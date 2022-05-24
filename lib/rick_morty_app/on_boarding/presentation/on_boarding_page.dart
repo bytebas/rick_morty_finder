@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:rick_morty_finder/core/constants/brand_assets.dart';
 import 'package:rick_morty_finder/core/constants/text_styles.dart';
+import 'package:rick_morty_finder/core/routes/app_router.dart';
 import 'package:rick_morty_finder/rick_morty_app/widgets/button/common_button.dart';
 import 'package:rick_morty_finder/rick_morty_app/widgets/text/common_text.dart';
 
@@ -19,7 +21,7 @@ class OnBoardingPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
-              image: BrandAssets.cover,
+              image: BrandAssets.cover(BoxFit.cover),
             ),
           ),
           SingleChildScrollView(
@@ -59,9 +61,7 @@ class OnBoardingPage extends StatelessWidget {
                   ),
                 ),
                 CommonButton(
-                  onTap: () {
-                    print('tapped');
-                  },
+                  onTap: () => context.router.replace(const HomeRoute()),
                   margin: const EdgeInsets.only(bottom: 50),
                   text: l10n.generic_continue,
                 ),

@@ -2,5 +2,6 @@
     "welcome" : "Bienvenido",
     "to_rick_morty" : "a Rick and Morty",
     "onBoarding_content" : "En esta prueba, evaluaremos su capacidad para construit la aplicación mediante el análisis de código y la reproducción del siquiente diseño.",
-    "generic_continue": "Continuar"
+    "generic_continue": "Continuar",
+    "search_character": "Bucar personaje..."
 }
