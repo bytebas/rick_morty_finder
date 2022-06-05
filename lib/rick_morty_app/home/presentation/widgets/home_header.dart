@@ -12,7 +12,7 @@ class HomeHeader extends StatelessWidget {
       children: [
         Container(
           width: MediaQuery.of(context).size.width,
-          height: 220,
+          height: MediaQuery.of(context).size.height * 0.3,
           decoration: BoxDecoration(
             image: BrandAssets.cover(
               BoxFit.none,
