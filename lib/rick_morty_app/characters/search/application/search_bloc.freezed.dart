@@ -857,6 +857,22 @@ class _$_SearchState implements _SearchState {
     return 'SearchState(characters: $characters, status: $status)';
   }
 
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SearchState &&
+            const DeepCollectionEquality()
+                .equals(other.characters, characters) &&
+            const DeepCollectionEquality().equals(other.status, status));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(characters),
+      const DeepCollectionEquality().hash(status));
+
   @JsonKey(ignore: true)
   @override
   _$$_SearchStateCopyWith<_$_SearchState> get copyWith =>

@@ -32,9 +32,9 @@ class SearchRepository {
 
       return Result<SearchResult>.success(data: searchResult);
     } on Exception {
-      return const Result.failure(error: SearchUnexpectedError());
+      return const Result.failure(error: SearchFailure.unexpectedError());
     } catch (error) {
-      return const Result.failure(error: SearchUnexpectedError());
+      return const Result.failure(error: SearchFailure.unexpectedError());
     }
   }
 
@@ -45,9 +45,9 @@ class SearchRepository {
 
       return Result.success(data: episode);
     } on Exception {
-      return const Result.failure(error: SearchUnexpectedError());
+      return const Result.failure(error: SearchFailure.unexpectedError());
     } catch (error) {
-      return const Result.failure(error: SearchUnexpectedError());
+      return const Result.failure(error: SearchFailure.unexpectedError());
     }
   }
 }

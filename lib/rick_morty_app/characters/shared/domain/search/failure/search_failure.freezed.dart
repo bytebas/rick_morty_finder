@@ -37,20 +37,20 @@ mixin _$SearchFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(SearchUnexpectedError value) unexpectedError,
-    required TResult Function(NotFound value) notFound,
+    required TResult Function(_SearchUnexpectedError value) unexpectedError,
+    required TResult Function(_NotFound value) notFound,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchUnexpectedError value)? unexpectedError,
-    TResult Function(NotFound value)? notFound,
+    TResult Function(_SearchUnexpectedError value)? unexpectedError,
+    TResult Function(_NotFound value)? notFound,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(SearchUnexpectedError value)? unexpectedError,
-    TResult Function(NotFound value)? notFound,
+    TResult Function(_SearchUnexpectedError value)? unexpectedError,
+    TResult Function(_NotFound value)? notFound,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -74,28 +74,29 @@ class _$SearchFailureCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$SearchUnexpectedErrorCopyWith<$Res> {
-  factory _$$SearchUnexpectedErrorCopyWith(_$SearchUnexpectedError value,
-          $Res Function(_$SearchUnexpectedError) then) =
-      __$$SearchUnexpectedErrorCopyWithImpl<$Res>;
+abstract class _$$_SearchUnexpectedErrorCopyWith<$Res> {
+  factory _$$_SearchUnexpectedErrorCopyWith(_$_SearchUnexpectedError value,
+          $Res Function(_$_SearchUnexpectedError) then) =
+      __$$_SearchUnexpectedErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SearchUnexpectedErrorCopyWithImpl<$Res>
+class __$$_SearchUnexpectedErrorCopyWithImpl<$Res>
     extends _$SearchFailureCopyWithImpl<$Res>
-    implements _$$SearchUnexpectedErrorCopyWith<$Res> {
-  __$$SearchUnexpectedErrorCopyWithImpl(_$SearchUnexpectedError _value,
-      $Res Function(_$SearchUnexpectedError) _then)
-      : super(_value, (v) => _then(v as _$SearchUnexpectedError));
+    implements _$$_SearchUnexpectedErrorCopyWith<$Res> {
+  __$$_SearchUnexpectedErrorCopyWithImpl(_$_SearchUnexpectedError _value,
+      $Res Function(_$_SearchUnexpectedError) _then)
+      : super(_value, (v) => _then(v as _$_SearchUnexpectedError));
 
   @override
-  _$SearchUnexpectedError get _value => super._value as _$SearchUnexpectedError;
+  _$_SearchUnexpectedError get _value =>
+      super._value as _$_SearchUnexpectedError;
 }
 
 /// @nodoc
 
-class _$SearchUnexpectedError implements SearchUnexpectedError {
-  const _$SearchUnexpectedError();
+class _$_SearchUnexpectedError implements _SearchUnexpectedError {
+  const _$_SearchUnexpectedError();
 
   @override
   String toString() {
@@ -105,7 +106,7 @@ class _$SearchUnexpectedError implements SearchUnexpectedError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SearchUnexpectedError);
+        (other.runtimeType == runtimeType && other is _$_SearchUnexpectedError);
   }
 
   @override
@@ -145,8 +146,8 @@ class _$SearchUnexpectedError implements SearchUnexpectedError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(SearchUnexpectedError value) unexpectedError,
-    required TResult Function(NotFound value) notFound,
+    required TResult Function(_SearchUnexpectedError value) unexpectedError,
+    required TResult Function(_NotFound value) notFound,
   }) {
     return unexpectedError(this);
   }
@@ -154,8 +155,8 @@ class _$SearchUnexpectedError implements SearchUnexpectedError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchUnexpectedError value)? unexpectedError,
-    TResult Function(NotFound value)? notFound,
+    TResult Function(_SearchUnexpectedError value)? unexpectedError,
+    TResult Function(_NotFound value)? notFound,
   }) {
     return unexpectedError?.call(this);
   }
@@ -163,8 +164,8 @@ class _$SearchUnexpectedError implements SearchUnexpectedError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(SearchUnexpectedError value)? unexpectedError,
-    TResult Function(NotFound value)? notFound,
+    TResult Function(_SearchUnexpectedError value)? unexpectedError,
+    TResult Function(_NotFound value)? notFound,
     required TResult orElse(),
   }) {
     if (unexpectedError != null) {
@@ -174,32 +175,33 @@ class _$SearchUnexpectedError implements SearchUnexpectedError {
   }
 }
 
-abstract class SearchUnexpectedError implements SearchFailure {
-  const factory SearchUnexpectedError() = _$SearchUnexpectedError;
+abstract class _SearchUnexpectedError implements SearchFailure {
+  const factory _SearchUnexpectedError() = _$_SearchUnexpectedError;
 }
 
 /// @nodoc
-abstract class _$$NotFoundCopyWith<$Res> {
-  factory _$$NotFoundCopyWith(
-          _$NotFound value, $Res Function(_$NotFound) then) =
-      __$$NotFoundCopyWithImpl<$Res>;
+abstract class _$$_NotFoundCopyWith<$Res> {
+  factory _$$_NotFoundCopyWith(
+          _$_NotFound value, $Res Function(_$_NotFound) then) =
+      __$$_NotFoundCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$NotFoundCopyWithImpl<$Res> extends _$SearchFailureCopyWithImpl<$Res>
-    implements _$$NotFoundCopyWith<$Res> {
-  __$$NotFoundCopyWithImpl(_$NotFound _value, $Res Function(_$NotFound) _then)
-      : super(_value, (v) => _then(v as _$NotFound));
+class __$$_NotFoundCopyWithImpl<$Res> extends _$SearchFailureCopyWithImpl<$Res>
+    implements _$$_NotFoundCopyWith<$Res> {
+  __$$_NotFoundCopyWithImpl(
+      _$_NotFound _value, $Res Function(_$_NotFound) _then)
+      : super(_value, (v) => _then(v as _$_NotFound));
 
   @override
-  _$NotFound get _value => super._value as _$NotFound;
+  _$_NotFound get _value => super._value as _$_NotFound;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(_$NotFound(
+    return _then(_$_NotFound(
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -210,8 +212,8 @@ class __$$NotFoundCopyWithImpl<$Res> extends _$SearchFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$NotFound implements NotFound {
-  const _$NotFound(this.message);
+class _$_NotFound implements _NotFound {
+  const _$_NotFound(this.message);
 
   @override
   final String message;
@@ -225,7 +227,7 @@ class _$NotFound implements NotFound {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NotFound &&
+            other is _$_NotFound &&
             const DeepCollectionEquality().equals(other.message, message));
   }
 
@@ -235,8 +237,8 @@ class _$NotFound implements NotFound {
 
   @JsonKey(ignore: true)
   @override
-  _$$NotFoundCopyWith<_$NotFound> get copyWith =>
-      __$$NotFoundCopyWithImpl<_$NotFound>(this, _$identity);
+  _$$_NotFoundCopyWith<_$_NotFound> get copyWith =>
+      __$$_NotFoundCopyWithImpl<_$_NotFound>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -272,8 +274,8 @@ class _$NotFound implements NotFound {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(SearchUnexpectedError value) unexpectedError,
-    required TResult Function(NotFound value) notFound,
+    required TResult Function(_SearchUnexpectedError value) unexpectedError,
+    required TResult Function(_NotFound value) notFound,
   }) {
     return notFound(this);
   }
@@ -281,8 +283,8 @@ class _$NotFound implements NotFound {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchUnexpectedError value)? unexpectedError,
-    TResult Function(NotFound value)? notFound,
+    TResult Function(_SearchUnexpectedError value)? unexpectedError,
+    TResult Function(_NotFound value)? notFound,
   }) {
     return notFound?.call(this);
   }
@@ -290,8 +292,8 @@ class _$NotFound implements NotFound {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(SearchUnexpectedError value)? unexpectedError,
-    TResult Function(NotFound value)? notFound,
+    TResult Function(_SearchUnexpectedError value)? unexpectedError,
+    TResult Function(_NotFound value)? notFound,
     required TResult orElse(),
   }) {
     if (notFound != null) {
@@ -301,11 +303,11 @@ class _$NotFound implements NotFound {
   }
 }
 
-abstract class NotFound implements SearchFailure {
-  const factory NotFound(final String message) = _$NotFound;
+abstract class _NotFound implements SearchFailure {
+  const factory _NotFound(final String message) = _$_NotFound;
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$$NotFoundCopyWith<_$NotFound> get copyWith =>
+  _$$_NotFoundCopyWith<_$_NotFound> get copyWith =>
       throw _privateConstructorUsedError;
 }

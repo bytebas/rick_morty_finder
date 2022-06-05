@@ -5,6 +5,6 @@ part 'search_failure.freezed.dart';
 
 @freezed
 class SearchFailure with _$SearchFailure implements ResultError {
-  const factory SearchFailure.unexpectedError() = SearchUnexpectedError;
-  const factory SearchFailure.notFound(String message) = NotFound;
+  const factory SearchFailure.unexpectedError() = _SearchUnexpectedError;
+  const factory SearchFailure.notFound(String message) = _NotFound;
 }

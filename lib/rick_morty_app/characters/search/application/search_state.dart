@@ -8,7 +8,7 @@ class SearchStateStatus with _$SearchStateStatus {
   const factory SearchStateStatus.load() = _Load;
 }
 
-@Freezed(equal: false)
+@freezed
 class SearchState with _$SearchState {
   factory SearchState({
     required List<Character> characters,
