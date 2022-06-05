@@ -33,6 +33,13 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
 
   Future<void> _onSearchFetch(
       FetchNextCharacters event, Emitter<SearchState> emit) async {
+    emit(
+      state.copyWith(
+        characters: state.characters,
+        status: const SearchStateStatus.load(),
+      ),
+    );
+
     final result = await provider.searchByPage(_searchPage++);
 
     result.when(
