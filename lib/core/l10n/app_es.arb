@@ -6,5 +6,11 @@
     "search_character": "Bucar personaje...",
     "male": "Masculino",
     "female": "Femenino",
-    "unknown": "Desconocido"
+    "unknown": "Desconocido",
+    "human": "Humano",
+    "alien": "Alien",
+    "alive": "Vivo",
+    "dead": "Muerto",
+    "last_location": "Última ubicación conocida:",
+    "first_seen": "Visto por primera vez:"
 }

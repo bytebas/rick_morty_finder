@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rick_morty_finder/core/constants/text_styles.dart';
+import 'package:rick_morty_finder/rick_morty_app/home/presentation/widgets/fav_button.dart';
 
 class ShowFavButton extends StatelessWidget {
   const ShowFavButton({Key? key}) : super(key: key);
@@ -16,22 +17,12 @@ class ShowFavButton extends StatelessWidget {
               'Mostrar favoritos',
               style: TextStyles.commonContent.copyWith(color: Colors.black),
             ),
-            Container(
-              height: 34,
-              width: 34,
+            FavButton(
+              () {
+                //TODO enable filter
+              },
               margin: const EdgeInsets.only(left: 10),
-              child: const Icon(Icons.star, color: Color(0xffB9B9B9)),
-              decoration: BoxDecoration(
-                  color: const Color(0xffF0F0F0),
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      offset: const Offset(0, 4),
-                      blurRadius: 4,
-                    )
-                  ]),
-            )
+            ),
           ],
         ),
       ),
