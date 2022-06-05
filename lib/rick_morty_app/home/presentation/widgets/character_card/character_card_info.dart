@@ -4,6 +4,7 @@ import 'package:rick_morty_finder/core/constants/brand_colors.dart';
 import 'package:rick_morty_finder/core/constants/text_styles.dart';
 import 'package:rick_morty_finder/rick_morty_app/characters/shared/domain/character/character.dart';
 import 'package:rick_morty_finder/rick_morty_app/home/presentation/widgets/character_card/status_indicator.dart';
+import 'package:rick_morty_finder/rick_morty_app/widgets/text/common_text.dart';
 
 class CharacterCardInfo extends StatelessWidget {
   final Character character;
@@ -38,14 +39,26 @@ class CharacterCardInfo extends StatelessWidget {
               ],
             ),
             Text(character.name,
+                maxLines: 1,
                 style:
                     TextStyles.commonContent.copyWith(color: BrandColors.dark)),
-            Text(l10n.last_location, style: TextStyles.small),
+            CommonText(
+              l10n.last_location,
+              alignment: Alignment.centerLeft,
+              top: 10,
+              style: TextStyles.small,
+            ),
             Text(character.location.name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style:
                     TextStyles.commonContent.copyWith(color: BrandColors.dark)),
-            Text(l10n.first_seen, style: TextStyles.small),
+            CommonText(l10n.first_seen,
+                alignment: Alignment.centerLeft,
+                top: 10,
+                style: TextStyles.small),
             Text(character.firstEpisode?.name ?? '',
+                maxLines: 1,
                 style:
                     TextStyles.commonContent.copyWith(color: BrandColors.dark)),
           ],
