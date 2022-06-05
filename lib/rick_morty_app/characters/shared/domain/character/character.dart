@@ -1,3 +1,4 @@
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:rick_morty_finder/rick_morty_app/characters/shared/domain/character/episode.dart';
 import 'package:rick_morty_finder/rick_morty_app/characters/shared/domain/search/location.dart';

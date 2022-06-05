@@ -152,7 +152,7 @@ class __$$_EpisodeCopyWithImpl<$Res> extends _$EpisodeCopyWithImpl<$Res>
           : episode // ignore: cast_nullable_to_non_nullable
               as String,
       characters: characters == freezed
-          ? _value._characters
+          ? _value.characters
           : characters // ignore: cast_nullable_to_non_nullable
               as List<String>,
       url: url == freezed
@@ -175,10 +175,9 @@ class _$_Episode implements _Episode {
       required this.name,
       @JsonKey(name: 'air_date') required this.airDate,
       required this.episode,
-      required final List<String> characters,
+      required this.characters,
       required this.url,
-      required this.created})
-      : _characters = characters;
+      required this.created});
 
   factory _$_Episode.fromJson(Map<String, dynamic> json) =>
       _$$_EpisodeFromJson(json);
@@ -192,13 +191,8 @@ class _$_Episode implements _Episode {
   final String airDate;
   @override
   final String episode;
-  final List<String> _characters;
   @override
-  List<String> get characters {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_characters);
-  }
-
+  final List<String> characters;
   @override
   final String url;
   @override
@@ -219,7 +213,7 @@ class _$_Episode implements _Episode {
             const DeepCollectionEquality().equals(other.airDate, airDate) &&
             const DeepCollectionEquality().equals(other.episode, episode) &&
             const DeepCollectionEquality()
-                .equals(other._characters, _characters) &&
+                .equals(other.characters, characters) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality().equals(other.created, created));
   }
@@ -232,7 +226,7 @@ class _$_Episode implements _Episode {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(airDate),
       const DeepCollectionEquality().hash(episode),
-      const DeepCollectionEquality().hash(_characters),
+      const DeepCollectionEquality().hash(characters),
       const DeepCollectionEquality().hash(url),
       const DeepCollectionEquality().hash(created));
 

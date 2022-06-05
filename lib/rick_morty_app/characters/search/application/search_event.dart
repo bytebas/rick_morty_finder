@@ -1,4 +1,7 @@
 part of 'search_bloc.dart';
 
-@immutable
-abstract class SearchEvent {}
+@freezed
+class SearchEvent with _$SearchEvent {
+  factory SearchEvent.fetchNextCharacters({@Default(1) int page}) =
+      FetchNextCharacters;
+}

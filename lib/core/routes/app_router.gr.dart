@@ -23,7 +23,7 @@ class _$AppRouter extends RootStackRouter {
     },
     HomeRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
-          routeData: routeData, child: const HomePage());
+          routeData: routeData, child: WrappedRoute(child: const HomePage()));
     }
   };
 

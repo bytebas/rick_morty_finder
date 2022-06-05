@@ -266,7 +266,7 @@ class __$$_CharacterCopyWithImpl<$Res> extends _$CharacterCopyWithImpl<$Res>
           : image // ignore: cast_nullable_to_non_nullable
               as String,
       episode: episode == freezed
-          ? _value._episode
+          ? _value.episode
           : episode // ignore: cast_nullable_to_non_nullable
               as List<String>,
       url: url == freezed
@@ -298,11 +298,10 @@ class _$_Character implements _Character {
       required this.origin,
       required this.location,
       required this.image,
-      required final List<String> episode,
+      required this.episode,
       required this.url,
       required this.created,
-      this.firstEpisode})
-      : _episode = episode;
+      this.firstEpisode});
 
   factory _$_Character.fromJson(Map<String, dynamic> json) =>
       _$$_CharacterFromJson(json);
@@ -328,13 +327,8 @@ class _$_Character implements _Character {
   final Location location;
   @override
   final String image;
-  final List<String> _episode;
   @override
-  List<String> get episode {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_episode);
-  }
-
+  final List<String> episode;
   @override
   final String url;
   @override
@@ -361,7 +355,7 @@ class _$_Character implements _Character {
             const DeepCollectionEquality().equals(other.origin, origin) &&
             const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality().equals(other._episode, _episode) &&
+            const DeepCollectionEquality().equals(other.episode, episode) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality().equals(other.created, created) &&
             const DeepCollectionEquality()
@@ -381,7 +375,7 @@ class _$_Character implements _Character {
       const DeepCollectionEquality().hash(origin),
       const DeepCollectionEquality().hash(location),
       const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(_episode),
+      const DeepCollectionEquality().hash(episode),
       const DeepCollectionEquality().hash(url),
       const DeepCollectionEquality().hash(created),
       const DeepCollectionEquality().hash(firstEpisode));
