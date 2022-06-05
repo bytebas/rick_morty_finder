@@ -1,0 +1,6 @@
+targets:
+  $default:
+    builders:
+      freezed:
+        release_options:
+          make_collections_unmodifiable: false
