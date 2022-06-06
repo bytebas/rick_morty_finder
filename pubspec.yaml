@@ -47,7 +47,7 @@ dependencies:
   #https://pub.dev/packages/dio
   dio: ^4.0.6
   json_annotation: ^4.5.0
-  mockito: ^5.2.0
+  mocktail: ^0.3.0
 
 dev_dependencies:
   flutter_test:

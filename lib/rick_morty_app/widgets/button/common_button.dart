@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rick_morty_finder/core/constants/brand_colors.dart';
+import 'package:rick_morty_finder/core/constants/measures.dart';
 import 'package:rick_morty_finder/core/constants/text_styles.dart';
 import 'package:rick_morty_finder/rick_morty_app/widgets/text/common_text.dart';
 
@@ -20,10 +21,11 @@ class CommonButton extends StatelessWidget {
         height: 46,
         width: 127,
         margin: margin,
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+        padding: const EdgeInsets.symmetric(
+            vertical: Measures.twelve, horizontal: Measures.twenty),
         decoration: BoxDecoration(
           color: BrandColors.greenBlue,
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(Measures.fifty),
         ),
         child: CommonText(
           text,
